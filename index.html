@@ -3,12 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Books by The Book Spree</title>
-  <meta name="description" content="Discover books by The Book Spress. Books that hit. Stories that stay.">
+  <title>Books by The Story Spree</title>
+  <meta name="description" content="Discover books by The Story Spree. Books that hit. Stories that stay.">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-
   <style>
-    body { 
+    body {
       font-family: 'Open Sans', sans-serif;
       margin: 0;
       padding: 0;
@@ -100,11 +99,56 @@
     footer {
       text-align: center;
       background: #fff;
-      padding: 20px;
+      padding: 30px 15px;
       color: #7f8c8d;
       font-size: 0.9em;
       margin-top: 40px;
       box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+    }
+
+    footer h3 {
+      font-family: 'Playfair Display', serif;
+      color: #2c3e50;
+      margin-bottom: 10px;
+      font-size: 1.2em;
+    }
+
+    .footer-section {
+      margin: 20px 0;
+    }
+
+    .socials a {
+      display: inline-block;
+      margin: 0 10px;
+      text-decoration: none;
+      transition: transform 0.3s ease, opacity 0.3s;
+      opacity: 0.85;
+    }
+
+    .socials a:hover {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+
+    .socials svg {
+      width: 28px;
+      height: 28px;
+      fill: #2c3e50;
+      transition: fill 0.3s;
+    }
+
+    .socials a:hover svg {
+      fill: #ff6b6b;
+    }
+
+    .contact a {
+      color: #2c3e50;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      color: #ff6b6b;
     }
 
     @media (max-width: 600px) {
@@ -113,12 +157,10 @@
     }
   </style>
 </head>
-
 <body>
   <header>
     <h1>The Story Spree</h1>
-    <p>Books that hit. Stories that stay. Fiction | Horror | Romance | Self-Help
-</p>
+    <p>Books that hit. Stories that stay. Fiction | Horror | Romance | Self-Help</p>
   </header>
 
   <div class="container">
@@ -126,7 +168,30 @@
   </div>
 
   <footer>
-    <p>&copy; 2025 The Book Spree. <a href="#">Privacy Policy</a></p>
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <div class="socials">
+        <a href="https://www.tiktok.com/@thestory.spree" target="_blank" title="TikTok">
+          <!-- TikTok SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+            <path d="M221.2 85.1c-23.6 0-43.4-19.1-43.4-42.6V32h-31.4v128.4c0 17.2-14 31.2-31.2 31.2s-31.2-14-31.2-31.2 14-31.2 31.2-31.2c3.4 0 6.7.5 9.8 1.5V98.7c-3.2-.5-6.6-.8-9.8-.8-34.8 0-63 28.3-63 63.2s28.3 63.2 63 63.2 63-28.3 63-63.2V92.7c12.4 8.7 27.5 13.8 43.4 13.8V85.1z"/>
+          </svg>
+        </a>
+        <a href="https://x.com/thestoryspree" target="_blank" title="X / Twitter">
+          <!-- X SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227">
+            <path d="M714.163 519.284L1177.14 0H1068.64L662.11 468.778L347.527 0H0L482.924 700.657L0 1227H108.501L535.523 731.212L872.473 1227H1200L714.137 519.284H714.163ZM588.031 665.083L541.321 597.983L147.871 79.62H296.256L602.695 518.518L649.405 585.617L1068.67 1147.96H920.283L588.031 665.083Z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-section contact">
+      <h3>Contact Us</h3>
+      <a href="mailto:thestoryspree@outlook.com">📧 thestoryspree@outlook.com</a>
+    </div>
+
+    <p>&copy; 2025 The Story Spree. All Rights Reserved.</p>
   </footer>
 
   <script>
@@ -153,7 +218,7 @@
         <img src="${book.img}" alt="${book.title} Cover">
         <h3>${book.title}</h3>
         <p>${book.desc}</p>
-        <a href="${book.link}" target="_blank" class="cta-button">View on Amazon</a>
+        <a href="${book.link}" target="_blank" class="cta-button">Buy on Amazon</a>
       `;
       grid.appendChild(card);
     });
